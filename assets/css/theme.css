@@ -2,7 +2,7 @@ body {
 	background: #fafbfc url(../img/texture.jpg) 0 0 repeat;
 }
 
-h1, h1 a{
+h1 {
 	color: #404853;
 	text-shadow: 0 1px 0 #fff;
 	font: 200 60px/60px "Open Sans";
