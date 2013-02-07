@@ -1,0 +1,99 @@
+.sidebar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 20%;
+	background: url(../img/black_linen_v2.png) repeat;
+	box-shadow: inset 5px 0 10px #000;
+}
+
+.wrapper {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 50%;
+	text-align: center;
+}
+
+.wrapper img#gravatar {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	margin-top: -50px;
+}
+
+.wrapper h1 {
+	color: #F7F8FA;
+	font: 1rem/1rem "Open Sans";
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	padding-top: 0.7em;
+}
+
+.wrapper h3 {
+	color: rgb(122, 122, 122);
+	font: 100 0.9rem/0.8rem "Droid Sans"
+}
+
+abbr[title="and"] {
+	font-family: Baskerville,Palatino,"Book Antiqua",serif;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 1rem;
+	position: relative;
+	top: 1px;
+	border-style: none;
+	cursor: default;
+}
+
+.wrapper #gravatar {
+	box-shadow: 0 1px 5px #000;
+}
+
+.main {
+	width: 80%;
+}
+
+article {
+	margin: 5% 10% 5% 10%;
+	font-family: "Open Sans";
+}
+
+.article-title  {
+	font-size: 1.5rem;
+	margin-bottom: 0;
+}
+
+.article-title a {
+	color: black;
+}
+
+.article-title a:hover {
+	text-decoration: none;
+	color: #404853;
+}
+
+.article-date {
+	display: block;
+	color: #c7c2b8;
+	font-size: 1rem;
+}
+
+.article-body {
+	padding-top: 2%;
+	padding-bottom: 4%;
+}
+
+.article-body p {
+	font-size: 1rem;
+	line-height: 1.7rem;
+	color: #69665b;
+}
+
+.article-body p:first-of-type {
+	font-size: 1.3rem;
+	line-height: 2.2rem;
+	padding-bottom: 1.2%;
+}

@@ -1,3 +1,16 @@
+h1 {
+	color: #404853;
+	text-shadow: 0 1px 0 #fff;
+	font: 200 60px/60px "Open Sans";
+	text-transform: uppercase;
+}
+
+h3 {
+	color: #404853;
+	text-shadow: 0 1px 0 #fff;
+	font-family: "Droid Sans",Arial,"Helvetica Neue","Lucida Grande",sans-serif;
+}
+
 div.div-center {
 	margin: 60px auto 0 auto;
 	width: 600px;
