@@ -11,10 +11,12 @@ style: blog
 </header>
 <div class="main">
 	<article class="article">
+		{% if page.title %}
 		<header class="article-header">
 			<h1 class="article-title"><a class="article-link" href="#">{{ page.title }}</a></h1>
 			<time class="article-date">{{ page.date | date_to_string }}</time>
 		</header>
+		{% endif %}
 		<div class="article-body">
 			{{ content }}
 		</div>
