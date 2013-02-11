@@ -4,8 +4,15 @@
 	right: 0;
 	bottom: 0;
 	width: 20%;
-	background: url(../img/black_linen_v2.png) repeat;
+	background: url(../img/debut_dark.png) repeat;
 	box-shadow: inset 5px 0 10px #000;
+}
+
+.sidebar-location {
+	position: relative;
+	top: -5px;
+	font: 12px "Droid Sans";
+	color: rgb(122, 122, 122);
 }
 
 .wrapper {
@@ -96,6 +103,7 @@ article {
 
 .article-body {
 	padding-top: 2%;
+	padding-bottom: 5%;
 }
 
 .article-body p {
