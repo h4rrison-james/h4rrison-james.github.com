@@ -13,8 +13,9 @@ style: blog
 	<article class="article">
 		{% if page.title %}
 		<header class="article-header">
+			<span class="article-label badge badge-info"><i class="icon-book icon-2x"></i></span>
 			<h1 class="article-title"><a class="article-link" href="#">{{ page.title }}</a></h1>
-			<time class="article-date">{{ page.date | date_to_string }}</time>
+			<time class="article-date">{{ page.date | date: "%B %Y" }}</time>
 		</header>
 		{% endif %}
 		<div class="article-body">

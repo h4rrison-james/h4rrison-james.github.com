@@ -54,11 +54,24 @@ abbr[title="and"] {
 
 .main {
 	width: 80%;
+	padding-top: 5%;
 }
 
 article {
-	margin: 5% 10% 5% 10%;
+	margin: 0 10%;
 	font-family: "Open Sans";
+}
+
+.article-label {
+	float: left;
+	margin: 12px 20px 0 0;
+	width: 27px;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.article-label i {
+	line-height: 40px;
 }
 
 .article-title  {
@@ -83,7 +96,6 @@ article {
 
 .article-body {
 	padding-top: 2%;
-	padding-bottom: 4%;
 }
 
 .article-body p {
