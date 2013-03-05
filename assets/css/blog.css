@@ -3,45 +3,44 @@
 	top: 0;
 	right: 0;
 	bottom: 0;
-	width: 20%;
-	background: url(../img/debut_dark.png) repeat;
-	box-shadow: inset 5px 0 10px #000;
-}
-
-.sidebar-location {
-	position: relative;
-	top: -5px;
-	font: 12px "Droid Sans";
-	color: rgb(122, 122, 122);
+	width: 30%;
+	background: url(https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*HQxEt_Yi6xPf7LtV.jpeg) repeat;
+	background-size: cover;
+	border-left: 1px #000 solid;
 }
 
 .wrapper {
 	position: absolute;
 	width: 100%;
 	left: 0;
-	top: 50%;
+	bottom: 0;
+	top: 75%;
 	text-align: center;
+	background: white;
 }
 
 .wrapper img#gravatar {
 	display: inline-block;
-	width: 100px;
-	height: 100px;
+	width: 90px;
+	height: 90px;
+	border: solid white 4px;
 	margin-top: -50px;
 }
 
 .wrapper h1 {
-	color: #F7F8FA;
-	font: 1rem/1rem "Open Sans";
+	color: #333332;
+	font-size: 1.6rem;
+	line-height: 1rem;
 	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: 0.1rem;
-	padding-top: 0.7em;
+	padding-top: 0.4em;
 }
 
 .wrapper h3 {
 	color: rgb(122, 122, 122);
-	font: 100 0.9rem/0.8rem "Droid Sans"
+	font-size: 0.9rem;
+	line-height: 0.8rem;
+	font-weight: normal;
+	font-style: italic;
 }
 
 abbr[title="and"] {
@@ -55,6 +54,18 @@ abbr[title="and"] {
 	cursor: default;
 }
 
+.sidebar-location {
+	position: relative;
+	top: -5px;
+	font-size: 0.8rem;
+	color: rgb(122, 122, 122);
+	font-style: italic;
+}
+
+.sidebar-location i {
+	padding-right: 2px;
+}
+
 .wrapper #gravatar {
 	box-shadow: 0 1px 5px #000;
 }
@@ -66,7 +77,6 @@ abbr[title="and"] {
 
 article {
 	margin: 0 10%;
-	font-family: "Open Sans";
 }
 
 .article-label {
