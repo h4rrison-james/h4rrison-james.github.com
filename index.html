@@ -1,19 +1,13 @@
 ---
-layout: default
-title: Harrison Sweeney
-style: index
+layout: blog
 ---
-<div class="div-center">
-	<img src="http://www.gravatar.com/avatar/05e56d6b576f8df89bd1f47622e71d27?s=200" class="img-circle" id="gravatar">
-	<h1>Harrison Sweeney</h1>
-	<h3><span>Developer <abbr title="and">&</abbr> Designer</span></h3>
+<div class='personal-header'>
+	<span class='personal-name tk-freight-sans-pro'>Latest Posts</span>
 </div>
-<div class="collapse" id='footer'>
-	<div class="wrapper">
-		<a href="http://twitter.com/harrisonjames"><i class="icon-twitter icon-2x"></i> Follow on Twitter</a>
-		<a href="http://github.com/h4rrison-james/"><i class="icon-github icon-2x"></i> Work on Github</a>
-		<a href="/blog.html"><i class="icon-comment icon-2x"></i> Read my Blog</a>
-		<a href="http://www.linkedin.com/pub/harrison-sweeney/48/652/486"><i class="icon-linkedin-sign icon-2x"></i> Profile on LinkedIn</a>
-	</div>
+{% for post in site.posts %}
+<div class="article-header">
+	<h1 class="article-title"><a class="article-link" href="{{ post.url }}">{{ post.title }}</a></h1>
+	<time class="article-date">{{ post.date | date: "%B %Y" }}</time>
+	<p class="article-excerpt">{{ post.excerpt }}</p>
 </div>
-<button id="moreButton" class='btn btn-primary' data-toggle='collapse' data-target='#footer'>More about me</button>
+{% endfor %}

@@ -1,14 +1,3 @@
-.personal-header {
-	text-transform: uppercase;
-	border-top: 1px solid #DDD;
-	border-bottom: 1px solid #DDD;
-	padding: 1% 0;
-	color: #b3b3b1;
-	font-weight: bold;
-	font-size: 12px;
-	letter-spacing: 2px;
-}
-
 .sidebar {
 	padding-bottom: 150px;
 	position: fixed;
@@ -21,7 +10,7 @@
 
 .sidebar-top {
 	height: 100%;
-	background: url(../img/wall.png) center center;
+	background: url(https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*HQxEt_Yi6xPf7LtV.jpeg) center center;
 	background-size: cover;
 	border-left: 1px #000 solid;
 }
@@ -59,8 +48,6 @@
 	line-height: 0.8rem;
 	font-weight: normal;
 	font-style: italic;
-	margin: 0 auto;
-	max-width: 300px;
 }
 
 abbr[title="and"] {
@@ -108,7 +95,6 @@ article {
 }
 
 .article-title  {
-	font-family: "ff-tisa-sans-web-pro",sans-serif;
 	font-size: 1.5rem;
 	margin-bottom: 0;
 }
@@ -130,8 +116,7 @@ article {
 
 .article-body {
 	padding-top: 2%;
-	padding-bottom: 2%;
-	border-bottom: 1px solid #DDD;
+	padding-bottom: 5%;
 }
 
 .article-body p {

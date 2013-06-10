@@ -1,0 +1,83 @@
+h1 {
+	color: #404853;
+	text-shadow: 0 1px 0 #fff;
+	font: 200 60px/60px "Open Sans";
+	text-transform: uppercase;
+}
+
+h3 {
+	color: #404853;
+	text-shadow: 0 1px 0 #fff;
+	font-family: "Droid Sans",Arial,"Helvetica Neue","Lucida Grande",sans-serif;
+}
+
+div.div-center {
+	margin: 60px auto 0 auto;
+	width: 600px;
+	text-align: center;
+}
+
+img#gravatar {
+	border: 10px solid white;
+	box-shadow: 0 1px 10px;
+}
+
+h1 {
+	padding-top: 15px;
+}
+
+h3 {
+	border-top: 1px solid #404853;
+	margin: 30px 20px 0 20px;
+}
+
+h3 span {
+	background: #fafbfc url(../img/texture.jpg) 0 0 repeat;
+	position: relative;
+	top: -26px;
+	padding: 0 20px;
+}
+
+abbr[title="and"] {
+	font-family: Baskerville,Palatino,"Book Antiqua",serif;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 45px;
+	position: relative;
+	top: 6px;
+	border-style: none;
+	cursor: default;
+}
+
+.btn {
+	display: block;
+	width: 140px;
+	margin: 10px auto 10px auto;
+	font-family: "Droid Sans";
+	font-weight: bold;
+}
+
+#footer div.wrapper {
+	text-align: center;
+	color: white;
+	background: url(../img/footer_bg.png) repeat-x;
+	padding: 60px 0;
+}
+
+#footer a {
+	color: white;
+	padding: 10px 30px;
+	font: 100 13px/20px "Droid Sans", Arial, sans-serif;
+	font-weight: bold;
+}
+
+#footer a:hover {
+	color: #0044CC;
+	text-decoration: none;
+}
+
+#footer a i {
+	position: relative;
+	top: 3px;
+	padding-right: 10px;
+}

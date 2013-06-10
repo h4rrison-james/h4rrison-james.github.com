@@ -1,0 +1,26 @@
+/* Not currently needed
+
+body {
+	padding-top: 60px;
+}
+
+header.jumbotron {
+	text-align: center;
+}
+
+span.address h3 {
+	border-top: 1px solid #404853;
+}
+
+span.address h3 a {
+	background: #fafbfc url(../img/texture.jpg) 0 0 repeat;
+	position: relative;
+	top: -20px;
+	padding: 0 20px;
+}
+
+span.address h3 a:hover {
+	text-decoration: none;
+}
+
+*/

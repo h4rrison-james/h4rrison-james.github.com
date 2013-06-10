@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang='en'>
+  
+<head>
+  <title>An Introduction To Jekyll</title>
+  <meta content='The personal website for Harrison Sweeney, a web and mobile designer/developer that lives in Perth, Australia.' name='description'>
+  
+  <link href="/assets/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/bootstrap-responsive.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/theme.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/post.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/assets/css/pygments.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="//use.typekit.net/dxd7cds.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/assets/js/main.js" type="text/javascript"></script>
+  
+  <!-- Insert favicon -->
+
+  <!--[if lt IE 9]>
+    <script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script>
+  <![endif]-->
+</head>
+<body>
+	<div class="main">
+	<article class="article">
+		
+		<header class="article-header">
+			<span class="article-label badge badge-info"><i class="icon-book icon-2x"></i></span>
+			<h1 class="article-title"><a class="article-link" href="#">An Introduction To Jekyll</a></h1>
+			<time class="article-date">February 2013</time>
+		</header>
+		
+		<div class="article-body">
+			<p>It seems everyone who starts a blog using Jekyll has to make a mandatory post about how they did it. Most of these just gloss over the details of the execution however, and I found that some things weren&#8217;t explained as well as they could have been in <a href='http://github.com/mojombo/jekyll'>the documentation</a>. This post, then, will serve as more of a tutorial to getting started with Jekyll.</p>
+
+<p>Jekyll is a static site generator that is specially tailored for creating static blogs. It takes a directory structure consisting of templates and content, and combines them to produce static HTML. In writing the templates and content, you can opt to use <a href='http://textile.thresholdstate.com/'>Textile</a> or <a href='http://daringfireball.net/projects/markdown/'>Markdown</a> syntax, and can make use of the <a href='http://liquidmarkup.org/'>Liquid</a> templating engine to add some flexibility to your pages.</p>
+
+<h2 id='directory_structure'>Directory Structure</h2>
+
+<p>The best way to think of Jekyll is as a static website generating &#8220;black box&#8221;. You feed templates and content in, and the &#8220;black box&#8221; spits out a fully compiled HTML static blog. The directory structure follows this same line of thought: everything from the root directory that is fed in to Jekyll is prefixed with an underscore. The templates directory, for example, is named <code>_layouts</code>, and the primary config file <code>_config.yml</code>. Any files or folders in the root directory not prefixed with an underscore will not be touched by Jekyll, and will remain as they are after the conversion process. Examples are things like <code>index.html</code> and your primary assets directory.</p>
+
+<h3 id='_layouts'>_layouts</h3>
+
+<p>The layouts directory contains (surprise, surprise) all of your layouts, which are basically HTML files that you feed content into in order to style it. This is done using something called <a href='http://github.com/mojombo/jekyll/wiki/YAML-Front-Matter'>YAML Front Matter</a>, which is placed at the beginning of each layout file, and looks something like this:</p>
+<div class='highlight'><pre><code class='yaml'><span class='nn'>---</span>
+<span class='l-Scalar-Plain'>layout</span><span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>default</span>
+<span class='l-Scalar-Plain'>title</span><span class='p-Indicator'>:</span> <span class='l-Scalar-Plain'>Tony Stark &gt; Blog</span>
+<span class='nn'>---</span>
+</code></pre></div>
+<p>This tells Jekyll that the following HTML file should be inserted into the <code>default</code> layout file, and has the title <code>Tony Stark &gt; Blog</code>. A look at the <code>default</code> layout file makes this a bit clearer:</p>
+<div class='highlight'><pre><code class='html'><span class='cp'>&lt;!DOCTYPE html&gt;</span>
+<span class='nt'>&lt;html</span> <span class='na'>lang=</span><span class='s'>&#39;en&#39;</span><span class='nt'>&gt;</span>
+
+<span class='nt'>&lt;head&gt;</span>
+	<span class='nt'>&lt;title&gt;</span>An Introduction To Jekyll<span class='nt'>&lt;/title&gt;</span>
+	<span class='c'>&lt;!-- All CSS and Javascript --&gt;</span>
+<span class='nt'>&lt;/head&gt;</span>
+
+<span class='nt'>&lt;body&gt;</span>
+	{{ content }}
+<span class='nt'>&lt;/body&gt;</span>
+<span class='nt'>&lt;/html&gt;</span>
+</code></pre></div>
+<p>As you might have guessed, Jekyll will insert the content where it finds the <code>{{ content }}</code> tag, and the title where it finds the <code>{{page.title}}</code> tag. In this way, YAML front matter gives us a way to daisy chain posts and layouts together so that we can reuse layout code efficiently. The simplest example of this would be a blog post that is inserted into the &#8220;blog&#8221; layout file, which is in turn inserted into the &#8220;default&#8221; layout file, resulting in a complete HTML document.</p>
+
+<h3 id='_posts'>_posts</h3>
+
+<p>This a special directory that contains all the actual content for your blog. This can contain HTML, Markdown, or Textile files, but files have to be named according to the following convention:</p>
+
+<pre><code>YYYY-MM-DD-name-of-your-post.filetype</code></pre>
+
+<p>Where &#8220;filetype&#8221; is either <code>html</code>, <code>markdown</code>, or <code>textile</code>, depending on which markup language you decided to use. As with layout files, all posts should be prefixed with YAML front matter.</p>
+
+<h3 id='_site'>_site</h3>
+
+<p>This is the other side of the &#8220;black box&#8221;, where Jekyll puts the compiled site. Don&#8217;t make the mistake of changing anything in here, it will all be overwritten next time the site is compiled.</p>
+
+<h3 id='assets'>assets</h3>
+
+<p>Not an official part of the Jekyll directory structure, but something you should definitely have: an assets folder for all your CSS, Javascript, images, and whatever else you want to use to style your pages. Note the lack of an underscore prefix.</p>
+
+<p>For more information on directory structure, make sure you read the <a href='http://github.com/mojombo/jekyll/wiki/usage'>official wiki post</a> on Github.</p>
+
+<h2 id='installation'>Installation</h2>
+
+<p>No we have the background stuff out of the way we can start actually doing something. Jekyll is packaged as a Ruby gem, so you&#8217;ll need that installed first. Open Terminal and type <code>ruby -v</code> to check that you have it installed. Next, type <code>gem install jekyll</code> and wait for installation to complete.</p>
+
+<p>It&#8217;s up to you to build the directory structure mentioned previously, so make sure you include, at the very least:</p>
+
+<pre><code>_layouts
+	default.html
+	post.html
+_posts
+	2013-02-11-demo-post.markdown
+assets
+index.html</code></pre>
+
+<p>Then we run <code>jekyll --server --auto</code> to start a local server. The <code>--auto</code> option watches the root directory for changes, and will recompile the site if it finds any. This is especially useful for tweaking CSS and making minor styling tweaks. Then visit <a href='localhost:4000'>localhost:4000</a> to check out your blog.</p>
+
+<h2 id='deployment'>Deployment</h2>
+
+<p>Since the end result of all this is just static HTML, there are an almost unlimited number of ways to deploy your new blog. I&#8217;m going to focus on one which is free, fast, and relatively easy to set up: <a href='http://pages.github.com/'>GitHub Pages</a>. GitHub Pages uses a Jekyll backend by default, so all we have to do is push a specially named repository and GitHub will handle the rest.</p>
+
+<p>Start by making a repository named <code>your-username.github.com</code>. Then, we initialise a new repository in our blog directory, add a new remote, commit the changes we have made, and push the results up to GitHub:</p>
+<div class='highlight'><pre><code class='bash'><span class='nb'>cd</span> ~/h4rrison/Coding/Blog
+git init
+git add .
+git commit -am <span class='s2'>&quot;Initial Commit&quot;</span>
+git remote add origin git@github.com:your-username/your-username.github.com
+git push origin master
+</code></pre></div>
+<p>After pushing, there will be a delay of a few minutes, then GitHub will notify you (hopefully) that your repo has compiled successfully, and you can check it out at <code>your-username.github.com</code>.</p>
+
+<h2 id='tips__tricks'>Tips &amp; Tricks</h2>
+
+<p>Here&#8217;s a few extra things I discovered which I found useful, and hopefully you will too.</p>
+
+<h3 id='permalinks_and_static_assets'>Permalinks and Static Assets</h3>
+
+<p>If you&#8217;re having &#8220;asset not found&#8221; issues in your posts, it&#8217;s likely due to the way Jekyll handles permalinks. With no extra options, all posts will have links of the following format:</p>
+
+<pre><code>your-username.github.com/2012/03/02/your-post.html</code></pre>
+
+<p>The advantage of this is a more readable URL, and <a href='http://github.com/mojombo/jekyll/wiki/Permalinks'>flexibility</a> in formatting. However, if you link to your static assets in your default layout using the path <code>&quot;/assets/css/whatever.css&quot;</code>, you&#8217;ll notice that the permalink structure will break this path. The solution is to use <code>{{ site.url }}</code> at the beginning of your path, which will evaluate on a page specific basis, keeping your asset links intact.</p>
+
+<h3 id='custom_yaml'>Custom YAML</h3>
+
+<p>YAML Front Matter is actually very flexible, and can be used to pass custom data into your layout files. For example, the custom field &#8220;name&#8221; can be included simply by adding the line</p>
+
+<pre><code>name: Batman</code></pre>
+
+<p>to your YAML front matter. It can then be accessed by your layout file using the tag <code>{{page.name}}</code>. You can even add lists of items, like so:</p>
+
+<pre><code>superheroes:
+	- Batman
+	- Ironman
+	- Captain America</code></pre>
+
+<p>Or multi-line data, like so:</p>
+
+<pre><code>description: &gt;
+	Any line breaks in this sentence 
+	will be rendered as spaces.
+
+description: |
+	Line breaks in this
+	sentence will be preserved.</code></pre>
+
+<h3 id='liquid_templating'>Liquid Templating</h3>
+
+<p>Jekyll makes full use of the <a href='http://liquidmarkup.org/'>Liquid Templating</a> system, allowing you to add loops and conditionals to your layouts. For example:</p>
+
+<pre><code>{% for page in pages %}
+	&lt;article&gt;
+		&lt;h1&gt;{{ page.title }}&lt;/h1&gt;
+		&lt;p&gt;{{ page.date }}&lt;/p&gt;
+	&lt;/article&gt;
+{% endfor %}</code></pre>
+
+<p>will loop through all the pages of your blog, rendering the enclosed HTML each time.</p>
+
+<p>Hopefully you&#8217;re now up and running with your own Jekyll blog. This has barely scratched the surface of what is possible with Jekyll, and there&#8217;s an enormous amount of <a href='http://github.com/mojombo/jekyll/wiki/sites'>example sites</a> on GitHub for you to check out, including <a href='http://github.com/h4rrison-james/h4rrison-james.github.com'>this one</a>.</p>
+
+<p>If you have any questions or comments, feel free to leave them below and I&#8217;ll get back to you shortly.</p>
+		</div>
+		
+		
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'harrisonsweeney'; // required: replace example with your forum shortname
+		
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+		
+	</article>
+</div>
+
+</body>
+</html>
