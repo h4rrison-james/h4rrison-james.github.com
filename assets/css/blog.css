@@ -128,10 +128,15 @@ article {
 	font-size: 1rem;
 }
 
+.article-header {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #DDD;
+}
+
 .article-body {
 	padding-top: 2%;
 	padding-bottom: 2%;
-	border-bottom: 1px solid #DDD;
 }
 
 .article-body p {
