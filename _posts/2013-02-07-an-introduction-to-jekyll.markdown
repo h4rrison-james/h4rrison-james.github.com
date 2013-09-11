@@ -4,6 +4,7 @@ title: An Introduction To Jekyll
 date: 7th February 2013
 comments: true
 ---
+
 It seems everyone who starts a blog using Jekyll has to make a mandatory post about how they did it. Most of these just gloss over the details of the execution however, and I found that some things weren't explained as well as they could have been in [the documentation](http://github.com/mojombo/jekyll). This post, then, will serve as more of a tutorial to getting started with Jekyll.
 
 Jekyll is a static site generator that is specially tailored for creating static blogs. It takes a directory structure consisting of templates and content, and combines them to produce static HTML. In writing the templates and content, you can opt to use [Textile](http://textile.thresholdstate.com/) or [Markdown](http://daringfireball.net/projects/markdown/) syntax, and can make use of the [Liquid](http://liquidmarkup.org/) templating engine to add some flexibility to your pages.

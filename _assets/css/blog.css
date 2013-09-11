@@ -21,7 +21,7 @@
 
 .sidebar-top {
 	height: 100%;
-	background: url(../img/wall.png) center center;
+	background: url(/assets/img/wall.png) center center;
 	background-size: cover;
 	border-left: 1px #000 solid;
 }
