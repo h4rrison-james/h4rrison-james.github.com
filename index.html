@@ -6,8 +6,8 @@ layout: blog
 </div>
 {% for post in site.posts %}
 <div class="article-header">
-	<h1 class="article-title"><a class="article-link" href="{{ post.url }}">{{ post.title }}</a></h1>
-	<time class="article-date">{{ post.date | date: "%B %Y" }}</time>
+	<h1><a class="article-link" href="{{ post.url }}">{{ post.title }}</a></h1>
+	<time>{{ post.date | date: "%B %Y" }}</time>
 	<p class="article-excerpt">{{ post.excerpt }}</p>
 </div>
 {% endfor %}

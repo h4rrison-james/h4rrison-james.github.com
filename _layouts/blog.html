@@ -11,13 +11,6 @@ layout: default
 </header>
 <div class="main">
 	<article class="article">
-		{% if page.title %}
-		<header>
-			<span class="badge badge-info"><i class="icon-book icon-2x"></i></span>
-			<h1><a class="article-link" href="#">{{ page.title }}</a></h1>
-			<time>{{ page.date | date: "%B %Y" }}</time>
-		</header>
-		{% endif %}
 		<div class="article-body">
 			{{ content }}
 		</div>

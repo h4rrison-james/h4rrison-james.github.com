@@ -1,3 +1,11 @@
+html {
+	font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
 .personal-header {
 	text-transform: uppercase;
 	border-top: 1px solid #DDD;
@@ -46,7 +54,6 @@
 			color: #333332;
 			font-size: 1.6rem;
 			line-height: 1rem;
-			font-weight: bold;
 			padding-top: 0.6rem;
 		}
 		
@@ -73,6 +80,10 @@
 	}
 }
 
+.full-post {
+	margin: 0 auto;
+}
+
 .main {
 	width: 70%;
 	padding-top: 5%;
@@ -80,52 +91,17 @@
 	article {
 		margin: 0 10%;
 		
-		header {
-			padding-bottom: 20px;
-			margin-bottom: 20px;
-			border-bottom: 1px solid #DDD;
-			
-			span {
-				float: left;
-				margin: 12px 20px 0 0;
-				width: 27px;
-				border-radius: 50%;
-				text-align: center;
-				
-				i {
-					line-height: 40px;
-				}
-			}
-			
-			h1 {
-				font-family: "ff-tisa-sans-web-pro",sans-serif;
-				font-size: 1.5rem;
-				margin-bottom: 0;
-				
-				a {
-					color: black;
-				}
-				a:hover {
-					text-decoration: none;
-					color: #404853;
-				}
-			}
-						
-			time {
-				display: block;
-				color: #c7c2b8;
-				font-size: 1rem;
-			}
-		}
-		
 		.article-body {
 			padding-top: 2%;
 			padding-bottom: 2%;
 			
-			p {
+			p, ul {
 				font-size: 1rem;
 				line-height: 1.7rem;
 				color: #69665b;
+				img {
+					width: 100%;
+				}
 			}
 			
 			p:first-of-type {
@@ -134,6 +110,35 @@
 				padding-bottom: 1.2%;
 			}
 		}
+		
+		div#disqus_thread {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.article-header 
+{ // This is used both for posts, and index page
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #DDD;
+	h1 {
+		font-family: "ff-tisa-sans-web-pro",sans-serif;
+		font-size: 1.5rem;
+		margin-bottom: 0;
+		a {
+			color: black;
+			font-weight: bold;
+		}
+		a:hover {
+			text-decoration: none;
+			color: #404853;
+		}
+	}
+	time {
+		display: block;
+		color: #c7c2b8;
+		font-size: 1rem;
 	}
 }
 
