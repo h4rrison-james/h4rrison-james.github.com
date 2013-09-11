@@ -1,6 +1,14 @@
 # Change your GitHub reponame
 GITHUB_REPONAME = "h4rrison-james/h4rrison-james.github.com"
 
+require 'rubygems'
+require 'rake'
+require 'rdoc'
+require 'date'
+require 'yaml'
+require 'tmpdir'
+require 'jekyll'
+
 desc "Generate blog files"
 task :generate do
   Jekyll::Site.new(Jekyll.configuration({
