@@ -3,7 +3,7 @@
   
 <head>
   <title>{{ page.title }}</title>
-  <meta content='The personal website for Harrison Sweeney, a web and mobile designer/developer that lives in Perth, Australia.' name='description'>
+  <meta content='The personal website for Harrison Sweeney, a web and mobile designer & developer that lives in Perth, Australia.' name='description'>
   
   <link href="{{ site.url }}/assets/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="{{ site.url }}/assets/css/bootstrap-responsive.css" media="screen" rel="stylesheet" type="text/css" />
@@ -11,11 +11,10 @@
   <link href="{{ site.url }}/assets/css/theme.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="{{ site.url }}/assets/css/{{ page.style }}.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="{{ site.url }}/assets/css/pygments.css" media="screen" rel="stylesheet" type="text/css" />
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  
+  <!-- Leave Typekit JS at the top to avoid flashing -->
   <script type="text/javascript" src="//use.typekit.net/dxd7cds.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  <script src="{{ site.url }}/assets/js/bootstrap.min.js" type="text/javascript"></script>
-  <script src="{{ site.url }}/assets/js/main.js" type="text/javascript"></script>
   
   <!-- Insert favicon -->
 
@@ -25,5 +24,10 @@
 </head>
 <body>
 	{{ content }}
+	
+	<!-- Javascript -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script src="{{ site.url }}/assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="{{ site.url }}/assets/js/main.js" type="text/javascript"></script>
 </body>
 </html>

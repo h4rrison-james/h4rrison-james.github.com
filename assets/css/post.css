@@ -48,6 +48,10 @@
 	color: #69665b;
 }
 
+.article-body ul {
+	color: #69665b;
+}
+
 .article-body p:first-of-type {
 	font-size: 1.3rem;
 	line-height: 2.2rem;
