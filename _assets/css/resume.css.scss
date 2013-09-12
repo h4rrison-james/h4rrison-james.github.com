@@ -1,0 +1,135 @@
+$clouds: #ECF0F1;
+$peter: #3498DB;
+$light-grey: #9DA0A4;
+$almost-black: #232527;
+$alizarin: #E74C3C;
+$pomegranite: #C0392B;
+$sunflower: #F1C40F;
+
+main#resume {
+	h1, h2, h3, h4, p {
+		font-family: 'source sans pro';
+	}
+	
+	h1 {
+		font-size: 48px;
+		font-weight: bold;
+		line-height: 1em;
+		margin: 0;
+	}
+	
+	p.subtitle {
+		font-size: 26px;
+		font-weight: 300;
+		line-height: 1.4em;
+		margin-top: 5px;
+	}
+	
+	.container {
+		width: 940px;
+		margin: 0 auto;
+	}
+
+	section.name {
+		margin: 100px auto;
+		h1 {
+			color: $almost-black;
+		}
+		p {
+			color: $light-grey;
+		}
+	}
+	
+	section.education {
+		background-color: $peter;
+		padding: 100px;
+		div.university {
+			margin-top: 60px;
+			img {
+				float: left;
+				width: 95px;
+				padding-right: 30px;
+			}
+			h1 {
+				color: white;
+			}
+			p {
+				color: white;
+				opacity: 0.8;
+				margin-bottom: 0;
+			}
+		}
+		div.university:first-of-type {
+			margin-top: 0;
+		}
+	}
+	
+	section.experience {
+		padding: 100px;
+		h1 { color: $almost-black; }
+		p { color: $light-grey; }
+		div.company { 
+			margin-top: 40px;
+			img {
+				width: 100px;
+				float: left;
+				padding-right: 30px;
+			}
+		}
+		div.company:first-of-type {
+			margin-top: 0;
+		}
+	}
+	
+	section.organisations {
+		background-color: $alizarin;
+		padding: 100px;
+		div.organisation {
+			margin-top: 60px;
+			img {
+				width: 100px;
+				float: left;
+				padding-right: 30px;
+			}
+			h1 {
+				color: white;
+			}
+			p {
+				color: white;
+				opacity: 0.8;
+				margin-bottom: 0;
+			}
+		}
+		div.organisation:first-of-type {
+			margin-top: 0;
+		}
+		div#ecoms div {
+			float: left;
+			width: 70%;
+		}
+	}
+	
+	section.volunteering {
+		background-color: $sunflower;
+		padding: 100px;
+		div.charity {
+			margin-top: 60px;
+			img {
+				width: 100px;
+				float: left;
+				padding-right: 30px;
+			}
+			h1 {
+				color: white;
+			}
+			p {
+				color: white;
+				opacity: 0.8;
+				margin-bottom: 0;
+			}
+		}
+		div.charity:first-of-type {
+			margin-top: 0;
+		}
+	}
+}
