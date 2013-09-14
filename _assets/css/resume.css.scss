@@ -27,10 +27,13 @@ main#resume {
 	
 	.container {
 		width: 940px;
-		margin: 0 auto;
+		margin: 0 0 0 100px;
 	}
 
 	section.name {
+		position: fixed;
+		top: 10px;
+		left: 220px;
 		margin: 100px auto;
 		h1 {
 			color: $almost-black;
@@ -38,6 +41,24 @@ main#resume {
 		p {
 			color: $light-grey;
 		}
+	}
+	
+	section.name-bottom {
+		position: fixed;
+		left: 220px;
+		bottom: 150px;
+		margin: 0;
+		h1 {
+			color: $almost-black;
+		}
+		p {
+			color: $light-grey;
+		}
+	}
+	
+	div#content-wrapper {
+		z-index: 2;
+		padding-top: 300px;
 	}
 	
 	section.education {
@@ -65,9 +86,11 @@ main#resume {
 	}
 	
 	section.experience {
+		background: white;
 		padding: 100px;
 		h1 { color: $almost-black; }
 		p { color: $light-grey; }
+		ul { margin-left: 0; }
 		div.company { 
 			margin-top: 40px;
 			img {
@@ -132,4 +155,84 @@ main#resume {
 			margin-top: 0;
 		}
 	}
+	
+	section.contact {
+		padding: 200px 100px 100px 220px;
+		div.icons {
+			a {
+				font-size: 40px;
+				color: $light-grey;
+				margin-left: 15px;
+			}
+			a:first-of-type { margin-left: 0; }
+			a:hover {
+				text-decoration: none;
+				color: $almost-black;
+			}
+		}
+	}
 }
+
+
+// CSS Animations for page load
+.fadeIn {
+	opacity:0;
+	-webkit-animation:fadeIn ease-in 1;
+	-moz-animation:fadeIn ease-in 1;
+	-o-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+	-webkit-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
+	-o-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+}
+
+.fadeUp {
+	opacity:0;
+	-webkit-animation:fadeUp ease-in 1;
+	-moz-animation:fadeUp ease-in 1;
+	-o-animation:fadeUp ease-in 1;
+	animation:fadeUp ease-in 1;
+	-webkit-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
+	-o-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+}
+
+.duration-1s {
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	-o-animation-duration:1s;
+	animation-duration:1s;
+}
+
+.duration-05s {
+	-webkit-animation-duration:0.5s;
+	-moz-animation-duration:0.5s;
+	-o-animation-duration:0.5s;
+	animation-duration:0.5s;
+}
+
+.delay-3s {
+	-webkit-animation-delay:3s;
+	-moz-animation-delay:3s;
+	-o-animation-delay:3s;
+	animation-delay:3s;
+}
+
+.delay-1s {
+	-webkit-animation-delay:1s;
+	-moz-animation-delay:1s;
+	-o-animation-delay:1s;
+	animation-delay:1s;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-o-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+@-webkit-keyframes fadeUp { from { opacity:0; margin-top: 50px; } to { opacity:1; margin-top: 0; } }
+@-moz-keyframes fadeUp { from { opacity:0; margin-top: 50px; } to { opacity:1; margin-top: 0; } }
+@-o-keyframes fadeUp { from { opacity:0; margin-top: 50px; } to { opacity:1; margin-top: 0; } }
+@keyframes fadeUp { from { opacity:0; margin-top: 50px; } to { opacity:1; margin-top: 0; } }
