@@ -1,3 +1,4 @@
+require 'bundler/setup'
 require 'jekyll_asset_pipeline'
 
 module JekyllAssetPipeline
