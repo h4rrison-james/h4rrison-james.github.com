@@ -1,0 +1,470 @@
+.hll { background-color: #ffffcc }
+.c { color: #408080; font-style: italic } /* Comment */
+.err { border: 1px solid #FF0000 } /* Error */
+.k { color: #008000; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.cp { color: #BC7A00 } /* Comment.Preproc */
+.c1 { color: #408080; font-style: italic } /* Comment.Single */
+.cs { color: #408080; font-style: italic } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #888888 } /* Generic.Output */
+.gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0044DD } /* Generic.Traceback */
+.kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #7D9029 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #999999; font-weight: bold } /* Name.Entity */
+.ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #A0A000 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #BB6688 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.il { color: #666666 } /* Literal.Number.Integer.Long */
+
+html {
+  font-size: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; }
+
+.personal-header {
+  text-transform: uppercase;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  padding: 1% 0;
+  color: #b3b3b1;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 2px; }
+
+.sidebar {
+  padding-bottom: 150px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  max-width: 500px; }
+  .sidebar .sidebar-top {
+    height: 100%;
+    background: url(/assets/img/wall.png) center center;
+    background-size: cover;
+    border-left: 1px #000 solid; }
+  .sidebar .sidebar-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 180px;
+    text-align: center;
+    background: white;
+    border-left: 1px #7a7a7a solid; }
+    .sidebar .sidebar-bottom img#gravatar {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      border: solid white 4px;
+      margin-top: -50px;
+      box-shadow: 0 1px 4px #BBB; }
+    .sidebar .sidebar-bottom h1 {
+      color: #333332;
+      font-size: 1.6rem;
+      line-height: 1rem;
+      padding-top: 0.6rem; }
+    .sidebar .sidebar-bottom h3 {
+      color: #7a7a7a;
+      font-size: 0.9rem;
+      line-height: 0.8rem;
+      font-weight: normal;
+      font-style: italic;
+      margin: 0 auto;
+      max-width: 300px; }
+      .sidebar .sidebar-bottom h3 abbr[title="and"] {
+        font-family: Baskerville,Palatino,"Book Antiqua",serif;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 1rem;
+        position: relative;
+        top: 1px;
+        border-style: none;
+        cursor: default; }
+    .sidebar .sidebar-bottom div.icons {
+      margin-top: 15px; }
+      .sidebar .sidebar-bottom div.icons i {
+        font-size: 25px;
+        margin-left: 10px;
+        color: #b3b3b1; }
+      .sidebar .sidebar-bottom div.icons a:first-of-type i {
+        margin-left: 0; }
+      .sidebar .sidebar-bottom div.icons i:hover {
+        color: #69665b;
+        text-decoration: none; }
+
+.full-post {
+  margin: 0 auto; }
+
+.main {
+  width: 70%;
+  padding-top: 5%; }
+  .main article {
+    margin: 0 10%; }
+    .main article .article-body {
+      padding-top: 2%;
+      padding-bottom: 2%; }
+      .main article .article-body p, .main article .article-body ul {
+        font-size: 1rem;
+        line-height: 1.7rem;
+        color: #69665b; }
+        .main article .article-body p img, .main article .article-body ul img {
+          width: 100%; }
+      .main article .article-body p:first-of-type {
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+        padding-bottom: 1.2%; }
+    .main article div#disqus_thread {
+      margin-bottom: 10px; }
+
+.article-header {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #DDD; }
+  .article-header h1 {
+    font-family: "ff-tisa-sans-web-pro",sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0; }
+    .article-header h1 a {
+      color: black;
+      font-weight: bold; }
+    .article-header h1 a:hover {
+      text-decoration: none;
+      color: #404853; }
+  .article-header time {
+    display: block;
+    color: #c7c2b8;
+    font-size: 1rem; }
+
+@media all and (max-width: 1024px) {
+  .sidebar {
+    width: 100%;
+    height: 300px;
+    max-width: none;
+    padding: 0;
+    position: relative; }
+    .sidebar .sidebar-top {
+      height: 200px;
+      border-left: none; }
+    .sidebar .sidebar-bottom {
+      position: relative;
+      border-left: none;
+      width: 80%;
+      margin: 0 auto; }
+
+  .main {
+    width: 80%;
+    margin: 0 auto; }
+    .main article {
+      margin: 0; } }
+@media all and (max-width: 767px) {
+  body {
+    padding: 0; }
+
+  .main {
+    width: 90%;
+    padding-top: 50px; } }
+
+main#resume h1, main#resume h2, main#resume h3, main#resume h4, main#resume p {
+  font-family: 'source sans pro'; }
+main#resume h1 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1em;
+  margin: 0; }
+main#resume p.subtitle {
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1.4em;
+  margin-top: 5px; }
+main#resume .container {
+  width: 940px;
+  margin: 0 0 0 100px; }
+main#resume section.name {
+  position: fixed;
+  top: 10px;
+  left: 220px;
+  margin: 100px auto; }
+  main#resume section.name h1 {
+    color: #232527; }
+  main#resume section.name p {
+    color: #9da0a4; }
+main#resume section.name-bottom {
+  position: fixed;
+  left: 220px;
+  bottom: 150px;
+  margin: 0; }
+  main#resume section.name-bottom h1 {
+    color: #232527; }
+  main#resume section.name-bottom p {
+    color: #9da0a4; }
+main#resume div#content-wrapper {
+  z-index: 2;
+  padding-top: 300px; }
+main#resume section.education {
+  background-color: #3498db;
+  padding: 100px; }
+  main#resume section.education div.university {
+    margin-top: 60px; }
+    main#resume section.education div.university img {
+      float: left;
+      width: 95px;
+      padding-right: 30px; }
+    main#resume section.education div.university h1 {
+      color: white; }
+    main#resume section.education div.university p {
+      color: white;
+      opacity: 0.8;
+      margin-bottom: 0; }
+  main#resume section.education div.university:first-of-type {
+    margin-top: 0; }
+main#resume section.experience {
+  background: white;
+  padding: 100px; }
+  main#resume section.experience h1 {
+    color: #232527; }
+  main#resume section.experience p {
+    color: #9da0a4; }
+  main#resume section.experience ul {
+    margin-left: 0; }
+  main#resume section.experience div.company {
+    margin-top: 40px; }
+    main#resume section.experience div.company img {
+      width: 100px;
+      float: left;
+      padding-right: 30px; }
+  main#resume section.experience div.company:first-of-type {
+    margin-top: 0; }
+main#resume section.organisations {
+  background-color: #e74c3c;
+  padding: 100px; }
+  main#resume section.organisations div.organisation {
+    margin-top: 60px; }
+    main#resume section.organisations div.organisation img {
+      width: 100px;
+      float: left;
+      padding-right: 30px; }
+    main#resume section.organisations div.organisation h1 {
+      color: white; }
+    main#resume section.organisations div.organisation p {
+      color: white;
+      opacity: 0.8;
+      margin-bottom: 0; }
+  main#resume section.organisations div.organisation:first-of-type {
+    margin-top: 0; }
+  main#resume section.organisations div#ecoms div {
+    float: left;
+    width: 70%; }
+main#resume section.volunteering {
+  background-color: #f1c40f;
+  padding: 100px; }
+  main#resume section.volunteering div.charity {
+    margin-top: 60px; }
+    main#resume section.volunteering div.charity img {
+      width: 100px;
+      float: left;
+      padding-right: 30px; }
+    main#resume section.volunteering div.charity h1 {
+      color: white; }
+    main#resume section.volunteering div.charity p {
+      color: white;
+      opacity: 0.8;
+      margin-bottom: 0; }
+  main#resume section.volunteering div.charity:first-of-type {
+    margin-top: 0; }
+main#resume section.contact {
+  padding: 200px 100px 100px 220px; }
+  main#resume section.contact div.icons a {
+    font-size: 40px;
+    color: #9da0a4;
+    margin-left: 15px; }
+  main#resume section.contact div.icons a:first-of-type {
+    margin-left: 0; }
+  main#resume section.contact div.icons a:hover {
+    text-decoration: none;
+    color: #232527; }
+
+/* Set up CSS animations */
+.fadeIn {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  -o-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.fadeUp {
+  opacity: 0;
+  -webkit-animation: fadeUp ease-in 1;
+  -moz-animation: fadeUp ease-in 1;
+  -o-animation: fadeUp ease-in 1;
+  animation: fadeUp ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.duration-1s {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s; }
+
+.duration-05s {
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  animation-duration: 0.5s; }
+
+.delay-3s {
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  animation-delay: 3s; }
+
+.delay-1s {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-o-keyframes fadeIn {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeUp {
+  from {
+    opacity: 0;
+    margin-top: 50px; }
+
+  to {
+    opacity: 1;
+    margin-top: 0; } }
+
+@-moz-keyframes fadeUp {
+  from {
+    opacity: 0;
+    margin-top: 50px; }
+
+  to {
+    opacity: 1;
+    margin-top: 0; } }
+
+@-o-keyframes fadeUp {
+  from {
+    opacity: 0;
+    margin-top: 50px; }
+
+  to {
+    opacity: 1;
+    margin-top: 0; } }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    margin-top: 50px; }
+
+  to {
+    opacity: 1;
+    margin-top: 0; } }
+
+/* Include custom resume font */
+@font-face {
+  font-family: 'resumeregular';
+  src: url("font/resume-webfont.eot");
+  src: url("font/resume-webfont.eot?#iefix") format("embedded-opentype"), url("font/resume-webfont.woff") format("woff"), url("font/resume-webfont.ttf") format("truetype"), url("font/fontresume-webfont.svg#resumeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+p.resume-icon {
+  width: 100px;
+  padding-right: 30px;
+  font-family: resumeregular !important;
+  font-size: 130px;
+  float: left;
+  line-height: 130px;
+  opacity: 1.0 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+p.resume-icon-uwa {
+  text-indent: -17px;
+  font-size: 170px;
+  line-height: 170px; }
+
+p.resume-icon-uvm {
+  font-size: 180px;
+  line-height: 170px;
+  text-indent: -21px; }

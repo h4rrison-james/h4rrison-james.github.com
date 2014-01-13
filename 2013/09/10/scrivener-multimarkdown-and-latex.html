@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang='en'>
+  
+<head>
+  <title>How to write your Thesis in MMD, Latex, and Scrivener</title>
+  <meta content='The personal website for Harrison Sweeney, a web and mobile designer & developer that lives in Perth, Australia.' name='description'>
+  
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700' rel='stylesheet' type='text/css'>
+  
+  <link href='/assets/global-08a68e93ba9eefd02652d2f2ece3a834.css' rel='stylesheet' type='text/css' />
+
+  
+  <script src='/assets/global-a6d6e29f5d0e95872542d53d036be0ac.js' type='text/javascript'></script>
+
+  
+  <!-- Leave Typekit JS at the top to avoid flashing -->
+  <script type="text/javascript" src="//use.typekit.net/dxd7cds.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+  <!-- Insert favicon -->
+
+  <!--[if lt IE 9]>
+    <script src='http://html5shiv.googlecode.com/svn/trunk/html5.js'></script>
+  <![endif]-->
+</head>
+<body>
+	<div class='main full-post'>
+	<article>
+		
+		<header class='article-header'>
+			<h1><a class="article-link" href="#">How to write your Thesis in MMD, Latex, and Scrivener</a></h1>
+			<time>September 2013</time>
+		</header>
+		
+		<div class="article-body">
+			<p>When it came time to begin writing my final year thesis for engineering, I realised very quickly that I faced a dilemma: put up with the woefully inadequate Microsoft Word, which I knew would eventually get the job done, or face many hours troubleshooting a more complicated <a href="http://www.latex-project.org/">LaTeX</a> setup, potentially wasting days before I could even start writing. </p>
+
+<p>Suffice to say, it didn&#39;t take very long for me to make my decision. One look at the beautifully typeset, evenly spaced, automatically referenced magic that was LaTeX and I was sold. Having made this decision, and after many hours researching LaTeX typesetting programs, I discovered <a href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a>.</p>
+
+<h2>MultiMarkdown</h2>
+
+<p>MultiMarkdown (MMD) is markup language that turns minimally marked up text into a variety of ordered formats like HTML and PDF. It&#39;s an extension of the popular text markup language <a href="http://daringfireball.net/projects/markdown/">Markdown</a>, originally by John Gruber. </p>
+
+<p>The premise is pretty simple: write in plain text with minimal markup to signify headings, links, and code blocks, and get perfectly formatted HTML or a nicely laid out PDF as a result. Why MDD over the original? It adds references, tables, and a few other critical tools to the original Markdown language. </p>
+
+<p>Now that I had decided on writing in Markdown and compiling to LaTeX, I began to look for an editor that would that would simplify the process for me.</p>
+
+<h2>Scrivener</h2>
+
+<p>Enter <a href="http://www.literatureandlatte.com/">Scrivener</a>. Scrivener is, put simply, a word processor on crack. It allows you to write in almost any format you can imagine (including the aforementioned MultiMarkdown), and will compile to HTML, Word, LaTeX, plaintext, and a host of other obscure formats. </p>
+
+<p>Arguably its most powerful feature is the ability to break up long documents into smaller &#39;texts&#39;, which can then be organised into folders as you choose. You can then rearrange the individual sections ad lib, attaching individual notes and noting version numbers. It also includes full support for viewing and managing references from within Scrivener, which is helpful for academic papers and other reference heavy documents.</p>
+
+<p><img src="/assets/img/scrivener.png" alt="Scrivener" title="Scrivener"></p>
+
+<p>Scrivener is a tad pricey at $45 USD, but comes with a free trial that I would highly recommend. In the end I figured it was worth spending 50 odd dollars for a year long project.</p>
+
+<h2>BibDesk</h2>
+
+<p>References are a crucial part of any thesis or academic paper, and managing and formatting them has traditionally been frustrating and repetitive. <a href="http://bibdesk.sourceforge.net/">BibDesk</a> is a pretty simple graphical bibliography manager. </p>
+
+<p>It allows you to build your list of references and assign a unique cite key to each one. I use the format <code>Author_Year</code>, though you can of course use anything you like. As an added bonus, <a href="http://scholar.google.com/">Google Scholar</a> includes the ability to copy a pre-formatted BibDesk reference to your clipboard, which you can then import into BibDesk using <code>Publication -&gt; New Publication from Clipboard</code>.</p>
+
+<p>After you&#39;ve built up your reference list, you simply include the cite key of a reference, and everything else is handled by LaTeX automatically. To make an inline citation for example, you would use the syntax <code>[#Boser_1992;]</code> (note the semicolon). To make a regular citation, which would appear in text at the end of the sentence, you simply drop the semicolon: <code>[#Jones_1996]</code>, as shown below:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">Despite the unlikelihood of this assumption being correct in practice, performance is often highly competitive, as demonstrated by [#Pazzani_1996;] and [#Langley_1992;]. Since the classifier also exhibits advantageous learning speed, it is widely applied in a variety of real world contexts[#Wu_2008].
+</code></pre></div>
+<p>The great thing about using cite keys like this is that any change to your reference in your BibDesk file will be automatically reflected in your LaTeX file, and the difficult-to-format line in the bibliography will be automatically updated.</p>
+
+<h2>Putting it all together</h2>
+
+<p>Although Scrivener comes with basic MultiMarkdown support, to get all the bells and whistles you&#39;ll have to install the MultiMarkdown Support package, available <a href="https://github.com/fletcher/peg-multimarkdown/downloads/">here</a>. Once you&#39;ve done that, you can write documents using the <a href="https://rawgithub.com/fletcher/human-markdown-reference/master/index.html">MMD syntax</a>. </p>
+
+<p>To export to LaTex, go to <code>File -&gt; Compile</code> and choose to compile from MultiMarkdown to LaTeX. Under compilation options, you can choose which parts of the document to export under &#39;Contents&#39;. Under &#39;LaTeX Options&#39; you can choose a document class to compile to (I find article works quite well for academic papers). Finally, under &#39;Meta-Data&#39;, you&#39;ll have to set a few options for everything to work correctly.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">Key             Value
+
+Base Header Level       2
+BibTeX              ../bibliography
+bibliostyle         plainnat
+Title               &lt;$projecttitle&gt;
+Author              &lt;$author&gt;
+latex input         ../custom-latex-input
+</code></pre></div>
+<p>To briefly explain:</p>
+
+<ul>
+<li><code>Base Header Level</code> changes how big your biggest headings appear (try 1, 2, and 3).</li>
+<li><code>BibTeX</code> is the path to your BibDesk .bib file (note no file extension).</li>
+<li><code>bibliostyle</code> is the name of the <a href="http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Bibliography_styles">format style</a> you&#39;d like applied to your citations.</li>
+<li><code>Title</code> simply passes LaTeX the title of the Scrivener document you are working in.</li>
+<li><code>Author</code> does the same thing.</li>
+<li><code>latex input</code> allows you to pass in a custom input file (optional, more on this later).</li>
+</ul>
+
+<p>Once you&#39;ve set that up, your basic workflow is as follows:</p>
+
+<ul>
+<li>Write using MMD syntax in Scrivener</li>
+<li>Export to LaTeX using <code>File -&gt; Compile</code></li>
+<li>Typeset the LaTeX using <a href="http://pages.uoregon.edu/koch/texshop/">TexShop</a> to output a PDF</li>
+</ul>
+
+<h2>Tips and Tricks</h2>
+
+<p>There are a few little tricks that you work out when using this workflow, which I&#39;ve included here to save you some time.</p>
+
+<p>Firstly, when typesetting the LaTeX file in TexShop, you&#39;ll have to typeset multiple times in order for the citations and bibliography to format properly. TexShop includes a macro to do this automatically under <code>Macros -&gt; Applescript -&gt; Bibliography</code>.</p>
+
+<p>Make sure your BibDesk .bib file is in the same directory as your LaTex file when you go to typeset, otherwise TexShop will give you an error and none of your citations will format correctly.</p>
+
+<p>You can add your own <code>latex footer</code> and <code>latex input</code> files by including those keys in your Scrivener meta-data. This allows you to import custom LaTeX packages so you can draw fancy figures, add special typesetting rules, and anything else that&#39;s possible with LaTeX. When adding these keys to your meta-data, it&#39;s important to put <code>latex input</code> last, and note that the file paths are relative to your export directory, and <em>do not</em> require extensions. If, for example, your custom input file is in the same directory that you export to, you would set <code>latex input</code> to <code>custom-latex-input</code> in Scrivener.</p>
+
+		</div>
+		
+		
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'harrisonsweeney'; // required: replace example with your forum shortname
+		
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		
+		
+	</article>
+</div>
+
+	
+	<!-- Google Analytics -->
+	<script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-44627910-1']);
+	  _gaq.push(['_setDomainName', 'harrisonsweeney.com']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</body>
+</html>
